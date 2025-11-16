@@ -1,14 +1,14 @@
 describe('Login', () => {
     //Precondition
     const URL: string = "https://www.saucedemo.com";
-    const correctUser = Cypress.env('correctUser');
-    const correctPwd = Cypress.env('correctPwd');
-    const incorrectUser = Cypress.env('incorrectUser');
-    const incorrectPwd = Cypress.env('incorrectPwd');
+    const correctUser = Cypress.env('correctUser') || process.env.correctUser;
+    const correctPwd = Cypress.env('correctPwd') || process.env.correctPwd;
+    const incorrectUser = Cypress.env('incorrectUser') || process.env.incorrectUser;
+    const incorrectPwd = Cypress.env('incorrectPwd') || process.env.incorrectPwd;;
     const errorIncorrect: string = "Epic sadface: Username and password do not match any user in this service";
     const errorBlankUser: string = "Epic sadface: Username is required";
     const errorBlankPwd: string = "Epic sadface: Password is required";
-    //Action
+    //Actions
     beforeEach(() => {
         cy.visit(URL);
         cy.get(".login_logo").should("contain", "Swag Labs");

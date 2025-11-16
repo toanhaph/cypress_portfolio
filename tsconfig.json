@@ -3,11 +3,11 @@
     "target": "ES6",
     "module": "commonjs",
     "lib": ["ES6", "DOM"],
-    "types": ["cypress"],
+    "types": ["cypress", "node"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "sourceMap": true
   },
-  "include": ["cypress/**/*.ts"]
+  "include": ["cypress/**/*.ts", "cypress.config.ts"]
 }
