@@ -7,6 +7,7 @@ export default defineConfig({
       // you can leave empty if no events are needed
       return config
     },
-    specPattern: 'cypress/e2e/**/*.cy.ts',
+    specPattern: 'cypress/e2e/**/*.ts',
+    env: {},
   },
 })
